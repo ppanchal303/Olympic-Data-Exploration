@@ -15,7 +15,6 @@ CREATE SCHEMA olympic;
 -- Setting the newly created schema as default
 USE olympic;
 
--- Creating a new table called 'athletes' to store athlete data
 DROP TABLE IF EXISTS athletes;
 CREATE TABLE athletes(
 	id nvarchar(255), -- INT NOT NULL,
@@ -38,6 +37,7 @@ CREATE TABLE athletes(
 
 -- Loading data from the csv file into the table created
 LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/athlete_events.csv'
+-- LOAD DATA LOCAL INFILE 'data/athlete_events.csv'
 INTO TABLE athletes
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
